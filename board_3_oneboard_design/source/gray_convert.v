@@ -1,25 +1,38 @@
 module gray_convert (
-    input             clk,
-    input             rst_n,
-    input             de_in,
-    input      [7:0]  r_in,
-    input      [7:0]  g_in,
-    input      [7:0]  b_in,
-    output reg        de_out,
-    output reg [7:0]  gray_out
+    input  wire        clk,
+    input  wire        rst_n,
+    input  wire        de_in,
+    input  wire [7:0]  r_in,
+    input  wire [7:0]  g_in,
+    input  wire [7:0]  b_in,
+    output reg         de_out,
+    output reg  [7:0]  gray_out
 );
 
-always @(posedge clk or negedge rst_n) begin
-    if (!rst_n) begin
-        de_out   <= 0;
-        gray_out <= 0;
-    end else if (de_in) begin
-        de_out   <= 1;
-        // ±ê×¼¼ÓÈ¨»Ò¶È£¨ÈËÑÛ×îÃô¸Ğ£©
-        gray_out <= (r_in * 77 + g_in * 150 + b_in * 29) >> 8;
-    end else begin
-        de_out   <= 0;
-    end
-end
+    reg de_d1;
+    reg [15:0] gray_temp;
 
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            de_out    <= 0;
+            gray_out  <= 0;
+            de_d1     <= 0;
+            gray_temp <= 0;
+        end else begin
+            // ç¬¬1æ‹ï¼šè®¡ç®—ï¼ˆå¯„å­˜å™¨åŒ–ï¼‰
+            if (de_in) begin
+                gray_temp <= (r_in * 77) + (g_in * 150) + (b_in * 29);  // ITU-R BT.601 æ ‡å‡†
+            end
+
+            // ç¬¬2æ‹ï¼šè¾“å‡ºï¼ˆä¸¥æ ¼å¯¹é½ï¼‰
+            de_d1  <= de_in;
+            de_out <= de_d1;
+
+            if (de_d1) begin
+                gray_out <= (gray_temp > 255) ? 8'd255 : gray_temp[7:0];
+            end else begin
+                gray_out <= 0;
+            end
+        end
+    end
 endmodule
