@@ -577,13 +577,10 @@ ov5640_power_on_delay	power_on_delay_inst(
 	.camera1_rstn            (cmos1_reset    ),//output
 	.camera2_rstn            (cmos2_reset    ),//output	
 	.camera_pwnd             (               ),//output
-	.initial_en              (initial_en     ) //output		
+	.initial_en              (1'b1     ) //output		
 );
-// ============== 第2步：强制两路 OV5640 都启动 ==============
-assign initial_en = 1'b1;      // 强制初始化
-assign cmos1_reset = 1'b1;     // 强制复位高
-assign cmos2_reset = 1'b1;     // 强制复位高
-// =========================================================
+assign cmos1_reset = 1'b1;   // 强制复位高
+assign cmos2_reset = 1'b1;   // 强制复位高
 //CMOS 8bitת16bit//////////
 //CMOS1
 always@(posedge cmos1_pclk)
