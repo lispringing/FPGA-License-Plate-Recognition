@@ -727,7 +727,23 @@ user_axi_m_arbitration (
     .x_act                   (x_act)  
 
 );
+// 临时 debug：强制写灰度到 video0 fifo（绕过 axi_m_arbitration 内部的 vs/de 判断）
+reg force_video0_de;
+reg [31:0] force_video0_data;
 
+always @(posedge pix_clk_in) begin
+    if (!(ddr_ip_rst_n && ddr_init_done)) begin
+        force_video0_de   <= 1'b0;
+        force_video0_data <= 32'd0;
+    end else begin
+        force_video0_de   <= gray_de;                  // 直接用 gray_convert 的 de
+        force_video0_data <= {gray_data, 2'b00, gray_data, 2'b00, gray_data, 2'b00, 2'b00};  // 灰度重复到 RGB
+    end
+end
+
+// 关键：临时覆盖 axi_m_arbitration 的 video0 输入信号
+assign video0_de_in  = force_video0_de;
+assign video0_data_in = force_video0_data;
 sync_generator user_sync_gen(
     .clk       (pix_clk_out ),//1080p�ο�ʱ��Ϊ148.5mhz
     .rstn      (ddr_ip_rst_n && ddr_init_done),
