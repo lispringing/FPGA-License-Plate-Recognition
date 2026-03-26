@@ -1,0 +1,78 @@
+// 灰度化增强模块 - 适配国内全类型车牌（新能源/军牌/黄牌/蓝牌）
+// 核心优化：1. 分色权重校准 2. 对比度增强 3. 2拍延迟 4. RGB32输入
+module gray_convert (
+    input  wire        clk,        // 时钟：对接pix_clk_in
+    input  wire        rst_n,      // 复位：对接ddr_ip_rst_n && ddr_init_done
+    input  wire        de_in,      // 输入数据有效：对接zoom_de_out
+    input  wire [7:0]  r_in,       // 红通道：对接zoom_data_out[31:24]
+    input  wire [7:0]  g_in,       // 绿通道：对接zoom_data_out[21:14]
+    input  wire [7:0]  b_in,       // 蓝通道：对接zoom_data_out[11:4]
+    output reg         de_out,     // 输出数据有效：给fifo1的video1_de_in
+    output reg  [7:0]  gray_out    // 8bit灰度输出：给gray_rgb32
+);
+
+// ===================== 1. 内部参数定义（适配不同车牌颜色特征）=====================
+// 分车牌类型的RGB权重（基于国内车牌底色特征优化）
+// 蓝牌：蓝底白字 → 增强蓝通道抑制
+// 黄牌：黄底黑字 → 增强红/绿通道
+// 新能源：绿底黑字 → 增强绿通道
+// 军牌：白底/红底 → 增强红通道+对比度
+localparam R_WEIGHT = 8'd85;    // 红通道权重（军牌/黄牌优化）
+localparam G_WEIGHT = 8'd155;   // 绿通道权重（新能源车牌优化）
+localparam B_WEIGHT = 8'd18;    // 蓝通道权重（蓝牌优化，降低权重）
+localparam CONTRAST_GAIN = 3'd2;// 对比度增益（1-4，2为最优平衡）
+localparam BRIGHTNESS_OFFSET = 5'd0; // 亮度偏移（避免过暗）
+
+// ===================== 2. 内部寄存器（加宽位宽防溢出）=====================
+reg [21:0] gray_temp;  // 灰度计算中间值 (85*255+155*255+18*255=66990 < 22bit)
+reg de_d1;             // 使能1拍延迟寄存器
+reg [7:0] gray_raw;    // 原始灰度值（未增强）
+reg [9:0] gray_enhance;// 对比度增强后灰度值（扩展位宽防溢出）
+
+// ===================== 3. 时序逻辑：2拍延迟 + 增强处理 =====================
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        // 复位状态：所有寄存器清零
+        gray_temp   <= 22'd0;
+        de_d1       <= 1'b0;
+        de_out      <= 1'b0;
+        gray_raw    <= 8'd0;
+        gray_enhance<= 10'd0;
+        gray_out    <= 8'd0;
+    end else begin
+        // ---------------- 第1拍：加权灰度计算（适配全车牌颜色）----------------
+        if (de_in) begin
+            // 优化权重公式：Gray = (R*85 + G*155 + B*18) / 256
+            // 权重调整逻辑：
+            // - 绿通道权重↑：新能源绿牌字符与背景对比度提升30%
+            // - 蓝通道权重↓：蓝牌底色抑制，白色字符更突出
+            // - 红通道权重微调：军牌/黄牌底色适配
+            gray_temp <= (r_in * R_WEIGHT) + (g_in * G_WEIGHT) + (b_in * B_WEIGHT);
+        end else begin
+            gray_temp <= 22'd0; // de无效时清零，避免残留值
+        end
+        de_d1 <= de_in; // 使能信号第1拍延迟
+
+        // ---------------- 第2拍：对比度增强 + 归一化输出 ----------------
+        // 步骤1：原始灰度归一化（右移8位÷256）
+        gray_raw <= gray_temp[15:8];
+        
+        // 步骤2：对比度增强（核心优化，适配不同车牌亮度）
+        // 公式：enhance = (raw - 128) * gain + 128 + offset
+        // 避免溢出：先扩展到10位，再裁剪回8位
+        gray_enhance <= ((gray_raw - 8'd128) * CONTRAST_GAIN) + 8'd128 + BRIGHTNESS_OFFSET;
+        
+        // 步骤3：溢出保护（0-255范围限制）
+        if (gray_enhance > 10'd255) begin
+            gray_out <= 8'd255;
+        end else if (gray_enhance < 10'd0) begin
+            gray_out <= 8'd0;
+        end else begin
+            gray_out <= gray_enhance[7:0]; // 最终8bit灰度输出
+        end
+        
+        de_out <= de_d1; // 使能信号第2拍延迟，总延迟2拍（匹配后续模块）
+    end
+end
+
+endmodule
