@@ -2782,7 +2782,7 @@
         <row>
             <data>N1022_0</data>
             <data>N1022_inv_1</data>
-            <data>585</data>
+            <data>560</data>
         </row>
         <row>
             <data>N1325</data>
@@ -2985,11 +2985,6 @@
             <data>4</data>
         </row>
         <row>
-            <data>user_hdmi_ctrl/user_iic_rx_driver/N434</data>
-            <data>user_hdmi_ctrl/user_iic_rx_driver/N434</data>
-            <data>5</data>
-        </row>
-        <row>
             <data>user_hdmi_ctrl/user_iic_rx_driver/N0_1</data>
             <data>user_hdmi_ctrl/user_iic_rx_driver/N0_1</data>
             <data>71</data>
@@ -3013,6 +3008,11 @@
             <data>user_hdmi_ctrl/user_iic_rx_driver/start</data>
             <data>user_hdmi_ctrl/user_iic_rx_driver/N39</data>
             <data>4</data>
+        </row>
+        <row>
+            <data>user_hdmi_ctrl/user_iic_tx_driver/N434</data>
+            <data>user_hdmi_ctrl/user_iic_tx_driver/N434</data>
+            <data>5</data>
         </row>
         <row>
             <data>user_hdmi_ctrl/user_iic_tx_driver/N151</data>
@@ -3219,7 +3219,7 @@
         <row>
             <data>ntclkbufg_2</data>
             <data>clkbufg_5</data>
-            <data>900</data>
+            <data>875</data>
         </row>
         <row>
             <data>ntclkbufg_3</data>
@@ -3234,7 +3234,7 @@
         <row>
             <data>N1022_0</data>
             <data>N1022_inv_1</data>
-            <data>587</data>
+            <data>562</data>
         </row>
         <row>
             <data>N407_0</data>
@@ -3272,24 +3272,14 @@
             <data>345</data>
         </row>
         <row>
-            <data>M_AXI_AWADDR[23]</data>
-            <data>user_axi_m_arbitration/M_AXI_WDATA_19</data>
-            <data>274</data>
-        </row>
-        <row>
             <data>M_AXI_AWADDR[22]</data>
             <data>user_axi_m_arbitration/M_AXI_WDATA_10</data>
             <data>274</data>
         </row>
         <row>
-            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_wdatapath/data_out [0]</data>
-            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_wdatapath/data_out[0]</data>
-            <data>261</data>
-        </row>
-        <row>
-            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [3]</data>
-            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[3]</data>
-            <data>261</data>
+            <data>M_AXI_AWADDR[23]</data>
+            <data>user_axi_m_arbitration/M_AXI_WDATA_19</data>
+            <data>274</data>
         </row>
         <row>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [2]</data>
@@ -3299,6 +3289,16 @@
         <row>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [1]</data>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[1]</data>
+            <data>261</data>
+        </row>
+        <row>
+            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [3]</data>
+            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[3]</data>
+            <data>261</data>
+        </row>
+        <row>
+            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_wdatapath/data_out [0]</data>
+            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_wdatapath/data_out[0]</data>
             <data>261</data>
         </row>
         <row>
@@ -3312,13 +3312,13 @@
             <data>255</data>
         </row>
         <row>
-            <data>user_axi_m_arbitration/arbitration_rd_state_3</data>
-            <data>user_axi_m_arbitration/arbitration_rd_state_3</data>
+            <data>user_axi_m_arbitration/arbitration_rd_state_4</data>
+            <data>user_axi_m_arbitration/arbitration_rd_state_4</data>
             <data>249</data>
         </row>
         <row>
-            <data>user_axi_m_arbitration/arbitration_rd_state_4</data>
-            <data>user_axi_m_arbitration/arbitration_rd_state_4</data>
+            <data>user_axi_m_arbitration/arbitration_rd_state_3</data>
+            <data>user_axi_m_arbitration/arbitration_rd_state_3</data>
             <data>249</data>
         </row>
         <row>
@@ -3397,13 +3397,13 @@
             <data>129</data>
         </row>
         <row>
-            <data>u_pcie_dam_ctrl/N1159</data>
-            <data>u_pcie_dam_ctrl/N1159</data>
+            <data>u_pcie_dam_ctrl/N1152</data>
+            <data>u_pcie_dam_ctrl/N1152_3</data>
             <data>128</data>
         </row>
         <row>
-            <data>u_pcie_dam_ctrl/N1152</data>
-            <data>u_pcie_dam_ctrl/N1152_3</data>
+            <data>u_pcie_dam_ctrl/N1159</data>
+            <data>u_pcie_dam_ctrl/N1159</data>
             <data>128</data>
         </row>
         <row>
@@ -3417,13 +3417,13 @@
             <data>122</data>
         </row>
         <row>
-            <data>hdmi_video_zoom/N47</data>
-            <data>hdmi_video_zoom/N47</data>
+            <data>eth_video_zoom/N47</data>
+            <data>eth_video_zoom/N47</data>
             <data>120</data>
         </row>
         <row>
-            <data>eth_video_zoom/N47</data>
-            <data>eth_video_zoom/N47</data>
+            <data>hdmi_video_zoom/N47</data>
+            <data>hdmi_video_zoom/N47</data>
             <data>120</data>
         </row>
         <row>
@@ -3437,8 +3437,8 @@
             <data>111</data>
         </row>
         <row>
-            <data>I_ipsxb_ddr_top/ddrphy_dqs_rst</data>
-            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_reset_ctrl/ddrphy_dqs_rst</data>
+            <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt [3]</data>
+            <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt[3]</data>
             <data>106</data>
         </row>
         <row>
@@ -3447,8 +3447,8 @@
             <data>106</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt [3]</data>
-            <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt[3]</data>
+            <data>I_ipsxb_ddr_top/ddrphy_dqs_rst</data>
+            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_reset_ctrl/ddrphy_dqs_rst</data>
             <data>106</data>
         </row>
         <row>
@@ -3462,13 +3462,13 @@
             <data>101</data>
         </row>
         <row>
-            <data>hdmi_video_zoom/N828</data>
-            <data>hdmi_video_zoom/N828</data>
+            <data>eth_video_zoom/N828</data>
+            <data>eth_video_zoom/N828</data>
             <data>97</data>
         </row>
         <row>
-            <data>eth_video_zoom/N828</data>
-            <data>eth_video_zoom/N828</data>
+            <data>hdmi_video_zoom/N828</data>
+            <data>hdmi_video_zoom/N828</data>
             <data>97</data>
         </row>
         <row>
@@ -3480,11 +3480,6 @@
             <data>I_ipsxb_ddr_top/u_ddrphy_top/rdel_calibration</data>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_calib_top/rdcal/rdel_calibration</data>
             <data>84</data>
-        </row>
-        <row>
-            <data>inv_de</data>
-            <data>u_invert_gray/de_out</data>
-            <data>83</data>
         </row>
         <row>
             <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_dcp_top/ctrl_back_rdy</data>
@@ -3502,13 +3497,18 @@
             <data>74</data>
         </row>
         <row>
-            <data>user_hdmi_ctrl/user_iic_rx_driver/N0_1</data>
-            <data>user_hdmi_ctrl/user_iic_rx_driver/N0_1</data>
-            <data>71</data>
+            <data>inv_de</data>
+            <data>u_invert_gray/de_out</data>
+            <data>73</data>
         </row>
         <row>
             <data>I_ipsxb_ddr_top/pll_clkin</data>
             <data>I_ipsxb_ddr_top/u_clkbufg</data>
+            <data>71</data>
+        </row>
+        <row>
+            <data>user_hdmi_ctrl/user_iic_rx_driver/N0_1</data>
+            <data>user_hdmi_ctrl/user_iic_rx_driver/N0_1</data>
             <data>71</data>
         </row>
         <row>
@@ -3534,7 +3534,7 @@
         <row>
             <data>nt_ddr_init_done</data>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_dfi/dfi_init_complete</data>
-            <data>65</data>
+            <data>66</data>
         </row>
         <row>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/dqsi_rdel_cal/rdel_calibration_d</data>
@@ -3552,13 +3552,13 @@
             <data>61</data>
         </row>
         <row>
-            <data>coms1_reg_config/N4</data>
-            <data>coms1_reg_config/N4</data>
+            <data>coms2_reg_config/reg_index [7]</data>
+            <data>coms2_reg_config/reg_index[7]</data>
             <data>58</data>
         </row>
         <row>
-            <data>coms2_reg_config/reg_index [7]</data>
-            <data>coms2_reg_config/reg_index[7]</data>
+            <data>coms1_reg_config/N4</data>
+            <data>coms1_reg_config/N4</data>
             <data>58</data>
         </row>
         <row>
@@ -3567,13 +3567,13 @@
             <data>57</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/u_hub_data_decode/N0</data>
-            <data>u_CORES/u_debug_core_0/u_hub_data_decode/N0</data>
+            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/dqs_gate_coarse_cal/_N18124</data>
+            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/dqs_gate_coarse_cal/dqs_gate_ctrl_adj_198_5</data>
             <data>56</data>
         </row>
         <row>
-            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/dqs_gate_coarse_cal/_N18094</data>
-            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/dqs_gate_coarse_cal/dqs_gate_ctrl_adj_198_5</data>
+            <data>u_CORES/u_debug_core_0/u_hub_data_decode/N0</data>
+            <data>u_CORES/u_debug_core_0/u_hub_data_decode/N0</data>
             <data>56</data>
         </row>
         <row>
@@ -3597,11 +3597,6 @@
             <data>48</data>
         </row>
         <row>
-            <data>u_license_plate_loc/N149</data>
-            <data>u_license_plate_loc/N149</data>
-            <data>48</data>
-        </row>
-        <row>
             <data>u_udp/u_udp_rx/N593</data>
             <data>u_udp/u_udp_rx/N593</data>
             <data>48</data>
@@ -3612,23 +3607,38 @@
             <data>47</data>
         </row>
         <row>
-            <data>N443</data>
-            <data>N443</data>
-            <data>46</data>
-        </row>
-        <row>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/phy_addr [15]</data>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_dfi/phy_addr[15]</data>
             <data>46</data>
         </row>
         <row>
-            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_calib_top/init_start</data>
-            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_calib_top/ddrphy_main_ctrl/init_start</data>
+            <data>N443</data>
+            <data>N443</data>
+            <data>46</data>
+        </row>
+        <row>
+            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/norm_cmd_l_wr</data>
+            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/N216</data>
+            <data>45</data>
+        </row>
+        <row>
+            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
+            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
             <data>45</data>
         </row>
         <row>
             <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
             <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
+            <data>45</data>
+        </row>
+        <row>
+            <data>u_udp/u_udp_tx/skip_en</data>
+            <data>u_udp/u_udp_tx/skip_en</data>
+            <data>45</data>
+        </row>
+        <row>
+            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_calib_top/init_start</data>
+            <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_calib_top/ddrphy_main_ctrl/init_start</data>
             <data>45</data>
         </row>
         <row>
@@ -3637,19 +3647,9 @@
             <data>45</data>
         </row>
         <row>
-            <data>u_udp/u_udp_tx/skip_en</data>
-            <data>u_udp/u_udp_tx/skip_en</data>
-            <data>45</data>
-        </row>
-        <row>
-            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
-            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
-            <data>45</data>
-        </row>
-        <row>
-            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/norm_cmd_l_wr</data>
-            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/N216</data>
-            <data>45</data>
+            <data>eth0_img_pkt/img_vsync_d0</data>
+            <data>eth0_img_pkt/img_vsync_d0</data>
+            <data>44</data>
         </row>
         <row>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/gate_move_en</data>
@@ -3659,11 +3659,6 @@
         <row>
             <data>axis_slave2_tlast</data>
             <data>u_pcie_dam_ctrl/r_axis_s_tlast</data>
-            <data>44</data>
-        </row>
-        <row>
-            <data>eth0_img_pkt/img_vsync_d0</data>
-            <data>eth0_img_pkt/img_vsync_d0</data>
             <data>44</data>
         </row>
         <row>
@@ -3680,6 +3675,11 @@
             <data>I_ipsxb_ddr_top/u_ddrphy_top/phy_addr [30]</data>
             <data>I_ipsxb_ddr_top/u_ddrphy_top/ddrphy_dfi/phy_addr[30]</data>
             <data>42</data>
+        </row>
+        <row>
+            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_ui_axi/pre_addr [26]</data>
+            <data>I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_ui_axi/pre_addr[26]</data>
+            <data>41</data>
         </row>
     </table>
     <table id="device_map_resource_usage" title="Resource Usage Summary" column_number="4">
@@ -3703,13 +3703,13 @@
         </row>
         <row>
             <data>FF</data>
-            <data>10688</data>
+            <data>10663</data>
             <data>64200</data>
             <data>17</data>
         </row>
         <row>
             <data>LUT</data>
-            <data>12823</data>
+            <data>12817</data>
             <data>42800</data>
             <data>30</data>
         </row>
@@ -3847,8 +3847,8 @@
         <row>
             <data>0h:0m:10s</data>
             <data>0h:0m:10s</data>
-            <data>0h:0m:24s</data>
-            <data>493</data>
+            <data>0h:0m:28s</data>
+            <data>491</data>
             <data>WINDOWS 10 x86_64</data>
             <data>AMD Ryzen 9 7940HX with Radeon Graphics</data>
             <data>15</data>
@@ -5801,6 +5801,9 @@
             <data message="4">Infer CARRY group, base inst: u_ipsl_pcie_wrap/u_pcie_top/u_pcie_soft_phy/hsst_pciex4_rst/hsst_rx_rst_mcrsw/genblk1[1].hsst_rst4mcrsw_rx_init/rx_rst_initfsm_multi_sw_lane/N60_1_1/gateop, insts:7.</data>
         </row>
         <row>
+            <data message="4">Infer CARRY group, base inst: I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_rdatapath/mcdq_prefetch_fifo/ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N2_1/gateop, insts:6.</data>
+        </row>
+        <row>
             <data message="4">Infer CARRY group, base inst: u_ipsl_pcie_wrap/u_pcie_top/u_pcie_soft_phy/hsst_pciex4_rst/hsst_rx_rst_mcrsw/genblk1[2].hsst_rst4mcrsw_rx_init/rx_rst_initfsm_multi_sw_lane/N21_1_1/gateop, insts:7.</data>
         </row>
         <row>
@@ -5927,34 +5930,34 @@
             <data message="4">Infer CARRY group, base inst: u_gray_convert/N54_2_1/gateop, insts:15.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N27.lt_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N26.lt_0/gateop, insts:6.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N33.lt_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N32.lt_0/gateop, insts:6.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N39.lt_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N38.lt_0/gateop, insts:6.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N45.lt_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N44.lt_0/gateop, insts:6.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N69.fsub_1/gateop, insts:13.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N67.fsub_1/gateop, insts:13.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N74.fsub_1/gateop, insts:13.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N72.fsub_1/gateop, insts:13.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N99.eq_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N88.eq_0/gateop, insts:6.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N100.eq_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N89.eq_0/gateop, insts:6.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N102.eq_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N91.eq_0/gateop, insts:6.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N104.eq_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_license_plate_loc/N93.eq_0/gateop, insts:6.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_median_filter/N43.lt_0/gateop, insts:4.</data>
@@ -6075,9 +6078,6 @@
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_udp/u_udp_tx/N917_5_0/gateop, insts:21.</data>
-        </row>
-        <row>
-            <data message="4">Infer CARRY group, base inst: I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_rdatapath/mcdq_prefetch_fifo/ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N2_1/gateop, insts:6.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_udp/u_udp_tx/N3561_1_1/gateop, insts:16.</data>
@@ -6402,9 +6402,6 @@
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_rdatapath/mcdq_prefetch_fifo/ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N36.eq_0/gateop, insts:3.</data>
-        </row>
-        <row>
-            <data message="4">Infer CARRY group, base inst: I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_buf/B_ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N30.fsub_1/gateop, insts:6.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_ipsl_pcie_wrap/u_pcie_top/u_pcie_soft_phy/hsst_pciex4_rst/hsst_rx_rst_mcrsw/genblk1[0].hsst_rst4mcrsw_rx_init/rx_rst_initfsm_multi_sw_lane/N21_1_1/gateop, insts:7.</data>
@@ -6788,7 +6785,10 @@
             <data message="4">Infer CARRY group, base inst: I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_buf/B_ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N24_1.fsub_1/gateop, insts:6.</data>
         </row>
         <row>
-            <data message="5">Public-4010: Pcf file C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf has been covered.</data>
+            <data message="4">Infer CARRY group, base inst: I_ipsxb_ddr_top/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_buf/B_ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N30.fsub_1/gateop, insts:6.</data>
+        </row>
+        <row>
+            <data message="5">Public-4010: Pcf file C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf has been covered.</data>
         </row>
     </table>
     <general_container id="device_map_settings">
@@ -57414,11 +57414,6 @@
                     <data>1</data>
                 </row>
                 <row>
-                    <data>n:inv_de</data>
-                    <data>PAP_MARK_DEBUG</data>
-                    <data>1</data>
-                </row>
-                <row>
                     <data>n:loc_de</data>
                     <data>PAP_MARK_DEBUG</data>
                     <data>1</data>
@@ -58240,6 +58235,11 @@
                 </row>
                 <row>
                     <data>n:pcie_data_out[15]</data>
+                    <data>PAP_MARK_DEBUG</data>
+                    <data>1</data>
+                </row>
+                <row>
+                    <data>n:plate_de</data>
                     <data>PAP_MARK_DEBUG</data>
                     <data>1</data>
                 </row>

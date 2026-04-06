@@ -3745,3 +3745,17 @@ pnr
 report_timing 
 gen_bit_stream 
 remove_design -force -verilog "C:/Users/happuking/Desktop/7/source/plate_locator_final_960x540.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 

@@ -300,13 +300,7 @@ assign plate_rgb32[13:12] = 2'd0;
 assign plate_rgb32[11:4]  = plate_data;
 assign plate_rgb32[3:2]   = 2'd0;
 assign plate_rgb32[1:0]   = 2'd0;*/
-assign plate_rgb32[31:24] = inv_data;
-assign plate_rgb32[23:22] = 2'd0;
-assign plate_rgb32[21:14] = inv_data;
-assign plate_rgb32[13:12] = 2'd0;
-assign plate_rgb32[11:4]  = inv_data;
-assign plate_rgb32[3:2]   = 2'd0;
-assign plate_rgb32[1:0]   = 2'd0;
+
 /*// 形态学结果转32bit RGB（适配FIFO显示格式）
 assign morph_rgb32[31:24] = morph_data;
 assign morph_rgb32[23:22] = 2'd0;
@@ -771,7 +765,7 @@ user_axi_m_arbitration (
     //.video1_vs_in            (eth0_rx_vs     ),//����ץȡ��λ
 // FIFO2 - 左下显示区域：自适应二值化车牌检测结果
 .video2_clk_in           (pix_clk_in),                       
-.video2_de_in            (inv_de),          // 接车牌模块的de_out
+.video2_de_in            (plate_de),          // 接车牌模块的de_out
 .video2_data_in          (plate_rgb32),       // 接车牌模块的32bit RGB    plate_rgb32
 .video2_rd_en            (video2_rd_en),
 .video2_data_out         (video2_data_out),
@@ -785,7 +779,6 @@ user_axi_m_arbitration (
 .video3_data_out         (video3_data_out),
 .fram3_done              (fram3_done),
 .video3_vs_in            (vs_in),
-    //����
     .wr_addr_min             (RW_ADDR_MIN),//д����ddr��С��ַ0��ַ��ʼ�㣬1920*1080*16 = 33177600 bits
     .wr_addr_max             (RW_ADDR_MAX), //д����ddr����ַ��һ����ַ��32λ 33177600/32 = 1036800 = 20'b1111_1101_0010_0000_0000
     .y_act                   (y_act)        , 
@@ -862,7 +855,9 @@ median_filter u_median_filter(
 
 wire        inv_de;
 wire [7:0]  inv_data;
-//灰色取反
+
+
+//灰色取反fifo2接的
 invert_gray u_invert_gray (
     .clk      (pix_clk_in),
     .rst_n    (ddr_ip_rst_n && ddr_init_done),
@@ -876,14 +871,7 @@ invert_gray u_invert_gray (
 
 
 // 原自适应二值化模块的实例化保持不变，但将其输出重命名
-  plate_adaptive_no_roi u_plate_adaptive_no_roi(
-    .clk       (pix_clk_in),
-    .rst_n     (ddr_ip_rst_n && ddr_init_done),
-    .de_in     (inv_de),
-    .gray_in   (inv_data),
-    .de_out    (plate_de),     // 原为 plate_de
-    .bin_out   (plate_data)    // 原为 plate_data
-);
+
 
 
 /*plate_morph_open u_plate_morph_open(

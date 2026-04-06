@@ -5918,48 +5918,48 @@
         </row>
         <row>
             <data>Use of CLMA</data>
-            <data>2512</data>
+            <data>2472</data>
             <data>6450</data>
             <data>39</data>
             <row>
                 <data>  FF</data>
-                <data>6641</data>
+                <data>6558</data>
                 <data>38700</data>
-                <data>18</data>
+                <data>17</data>
             </row>
             <row>
                 <data>  LUT</data>
-                <data>7780</data>
+                <data>7865</data>
                 <data>25800</data>
                 <data>31</data>
             </row>
             <row>
                 <data>  LUT-FF pairs</data>
-                <data>3167</data>
+                <data>3185</data>
                 <data>25800</data>
                 <data>13</data>
             </row>
         </row>
         <row>
             <data>Use of CLMS</data>
-            <data>1594</data>
+            <data>1579</data>
             <data>4250</data>
             <data>38</data>
             <row>
                 <data>  FF</data>
-                <data>4022</data>
+                <data>4129</data>
                 <data>25500</data>
-                <data>16</data>
+                <data>17</data>
             </row>
             <row>
                 <data>  LUT</data>
-                <data>5050</data>
+                <data>4966</data>
                 <data>17000</data>
                 <data>30</data>
             </row>
             <row>
                 <data>  LUT-FF pairs</data>
-                <data>1984</data>
+                <data>1956</data>
                 <data>17000</data>
                 <data>12</data>
             </row>
@@ -6002,7 +6002,7 @@
         </row>
         <row>
             <data>Use of HARD0N1</data>
-            <data>1287</data>
+            <data>1293</data>
             <data>6672</data>
             <data>20</data>
         </row>
@@ -6211,8 +6211,8 @@
         </column_headers>
         <row>
             <data>test_ddr</data>
-            <data>12817</data>
-            <data>10663</data>
+            <data>12821</data>
+            <data>10687</data>
             <data>73</data>
             <data>1</data>
             <data>101</data>
@@ -6237,7 +6237,7 @@
             <data>13</data>
             <row>
                 <data>I_ipsxb_ddr_top</data>
-                <data>4043</data>
+                <data>4041</data>
                 <data>3974</data>
                 <data>73</data>
                 <data>0</data>
@@ -6290,7 +6290,7 @@
                 </row>
                 <row>
                     <data>u_ddrphy_top</data>
-                    <data>2388</data>
+                    <data>2387</data>
                     <data>2344</data>
                     <data>0</data>
                     <data>0</data>
@@ -6559,7 +6559,7 @@
                     </row>
                     <row>
                         <data>ddrphy_info</data>
-                        <data>99</data>
+                        <data>97</data>
                         <data>60</data>
                         <data>0</data>
                         <data>0</data>
@@ -6694,7 +6694,7 @@
                     </row>
                     <row>
                         <data>ddrphy_slice_top</data>
-                        <data>1570</data>
+                        <data>1571</data>
                         <data>1361</data>
                         <data>0</data>
                         <data>0</data>
@@ -6720,7 +6720,7 @@
                         <data>0</data>
                         <row>
                             <data>i_dqs_group[0].u_ddrphy_data_slice</data>
-                            <data>463</data>
+                            <data>468</data>
                             <data>308</data>
                             <data>0</data>
                             <data>0</data>
@@ -6827,7 +6827,7 @@
                             </row>
                             <row>
                                 <data>data_slice_wrlvl</data>
-                                <data>103</data>
+                                <data>106</data>
                                 <data>76</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -6881,7 +6881,7 @@
                             </row>
                             <row>
                                 <data>dqsi_rdel_cal</data>
-                                <data>160</data>
+                                <data>162</data>
                                 <data>84</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -6962,7 +6962,7 @@
                             <data>0</data>
                             <row>
                                 <data>data_slice_dqs_gate_cal</data>
-                                <data>83</data>
+                                <data>84</data>
                                 <data>61</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -6988,7 +6988,7 @@
                                 <data>0</data>
                                 <row>
                                     <data>dqs_gate_coarse_cal</data>
-                                    <data>35</data>
+                                    <data>34</data>
                                     <data>26</data>
                                     <data>0</data>
                                     <data>0</data>
@@ -7015,7 +7015,7 @@
                                 </row>
                                 <row>
                                     <data>gatecal</data>
-                                    <data>48</data>
+                                    <data>50</data>
                                     <data>35</data>
                                     <data>0</data>
                                     <data>0</data>
@@ -7043,7 +7043,7 @@
                             </row>
                             <row>
                                 <data>data_slice_wrlvl</data>
-                                <data>103</data>
+                                <data>104</data>
                                 <data>68</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7097,7 +7097,7 @@
                             </row>
                             <row>
                                 <data>dqsi_rdel_cal</data>
-                                <data>158</data>
+                                <data>156</data>
                                 <data>81</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7152,7 +7152,7 @@
                         </row>
                         <row>
                             <data>i_dqs_group[2].u_ddrphy_data_slice</data>
-                            <data>338</data>
+                            <data>343</data>
                             <data>262</data>
                             <data>0</data>
                             <data>0</data>
@@ -7313,7 +7313,7 @@
                             </row>
                             <row>
                                 <data>dqsi_rdel_cal</data>
-                                <data>102</data>
+                                <data>107</data>
                                 <data>59</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7368,7 +7368,7 @@
                         </row>
                         <row>
                             <data>i_dqs_group[3].u_ddrphy_data_slice</data>
-                            <data>347</data>
+                            <data>338</data>
                             <data>262</data>
                             <data>0</data>
                             <data>0</data>
@@ -7394,7 +7394,7 @@
                             <data>0</data>
                             <row>
                                 <data>data_slice_dqs_gate_cal</data>
-                                <data>84</data>
+                                <data>83</data>
                                 <data>61</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7447,7 +7447,7 @@
                                 </row>
                                 <row>
                                     <data>gatecal</data>
-                                    <data>50</data>
+                                    <data>49</data>
                                     <data>35</data>
                                     <data>0</data>
                                     <data>0</data>
@@ -7475,7 +7475,7 @@
                             </row>
                             <row>
                                 <data>data_slice_wrlvl</data>
-                                <data>104</data>
+                                <data>101</data>
                                 <data>68</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7529,7 +7529,7 @@
                             </row>
                             <row>
                                 <data>dqsi_rdel_cal</data>
-                                <data>110</data>
+                                <data>105</data>
                                 <data>59</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7694,7 +7694,7 @@
                 </row>
                 <row>
                     <data>u_ipsxb_ddrc_top</data>
-                    <data>1654</data>
+                    <data>1653</data>
                     <data>1628</data>
                     <data>73</data>
                     <data>0</data>
@@ -7826,7 +7826,7 @@
                             <data>0</data>
                             <row>
                                 <data>mcdq_dcd_rowaddr</data>
-                                <data>16</data>
+                                <data>13</data>
                                 <data>8</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -9502,7 +9502,7 @@
                     </row>
                     <row>
                         <data>mcdq_ui_axi</data>
-                        <data>144</data>
+                        <data>143</data>
                         <data>285</data>
                         <data>0</data>
                         <data>0</data>
@@ -10422,7 +10422,7 @@
             </row>
             <row>
                 <data>u_color_mask</data>
-                <data>109</data>
+                <data>108</data>
                 <data>31</data>
                 <data>0</data>
                 <data>0</data>
@@ -11092,7 +11092,7 @@
                                 <data>0</data>
                                 <row>
                                     <data>genblk1[0].hsst_rst4mcrsw_rx_init</data>
-                                    <data>68</data>
+                                    <data>69</data>
                                     <data>38</data>
                                     <data>0</data>
                                     <data>0</data>
@@ -11172,7 +11172,7 @@
                                     </row>
                                     <row>
                                         <data>rx_rst_initfsm_multi_sw_lane</data>
-                                        <data>67</data>
+                                        <data>68</data>
                                         <data>32</data>
                                         <data>0</data>
                                         <data>0</data>
@@ -11227,7 +11227,7 @@
                                 </row>
                                 <row>
                                     <data>genblk1[1].hsst_rst4mcrsw_rx_init</data>
-                                    <data>68</data>
+                                    <data>67</data>
                                     <data>38</data>
                                     <data>0</data>
                                     <data>0</data>
@@ -11307,7 +11307,7 @@
                                     </row>
                                     <row>
                                         <data>rx_rst_initfsm_multi_sw_lane</data>
-                                        <data>67</data>
+                                        <data>66</data>
                                         <data>32</data>
                                         <data>0</data>
                                         <data>0</data>
@@ -11826,8 +11826,8 @@
             </row>
             <row>
                 <data>u_license_plate_loc</data>
-                <data>152</data>
-                <data>104</data>
+                <data>142</data>
+                <data>128</data>
                 <data>0</data>
                 <data>0</data>
                 <data>0</data>
@@ -12015,7 +12015,7 @@
             </row>
             <row>
                 <data>u_plate_adaptive_no_roi</data>
-                <data>156</data>
+                <data>165</data>
                 <data>83</data>
                 <data>0</data>
                 <data>0</data>
@@ -12285,7 +12285,7 @@
             </row>
             <row>
                 <data>user_axi_m_arbitration</data>
-                <data>2311</data>
+                <data>2322</data>
                 <data>938</data>
                 <data>0</data>
                 <data>0</data>
@@ -12311,7 +12311,7 @@
                 <data>0</data>
                 <row>
                     <data>u_axi_full_m0</data>
-                    <data>107</data>
+                    <data>112</data>
                     <data>57</data>
                     <data>0</data>
                     <data>0</data>
@@ -12338,7 +12338,7 @@
                 </row>
                 <row>
                     <data>u_axi_full_m1</data>
-                    <data>108</data>
+                    <data>109</data>
                     <data>53</data>
                     <data>0</data>
                     <data>0</data>
@@ -12365,7 +12365,7 @@
                 </row>
                 <row>
                     <data>u_axi_full_m2</data>
-                    <data>107</data>
+                    <data>109</data>
                     <data>53</data>
                     <data>0</data>
                     <data>0</data>
@@ -12392,7 +12392,7 @@
                 </row>
                 <row>
                     <data>u_axi_full_m3</data>
-                    <data>112</data>
+                    <data>111</data>
                     <data>53</data>
                     <data>0</data>
                     <data>0</data>
@@ -13418,8 +13418,8 @@
                 <data>0</data>
                 <row>
                     <data>user_iic_rx_driver</data>
-                    <data>72</data>
-                    <data>56</data>
+                    <data>79</data>
+                    <data>61</data>
                     <data>0</data>
                     <data>0</data>
                     <data>0</data>
@@ -13445,8 +13445,8 @@
                 </row>
                 <row>
                     <data>user_iic_tx_driver</data>
-                    <data>72</data>
-                    <data>61</data>
+                    <data>65</data>
+                    <data>56</data>
                     <data>0</data>
                     <data>0</data>
                     <data>0</data>
@@ -13646,10 +13646,10 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:2m:11s</data>
-            <data>0h:2m:11s</data>
-            <data>0h:2m:20s</data>
-            <data>1,614</data>
+            <data>0h:2m:12s</data>
+            <data>0h:2m:12s</data>
+            <data>0h:2m:17s</data>
+            <data>1,602</data>
             <data>WINDOWS 10 x86_64</data>
             <data>AMD Ryzen 9 7940HX with Radeon Graphics</data>
             <data>15</data>
@@ -13658,169 +13658,169 @@
     <table id="pnr_messages" title="Place &amp; Route Messages" column_number="1">
         <column_headers/>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 4)] | Port cmos1_sda has been placed at location Y13, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 4)] | Port cmos1_sda has been placed at location Y13, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 7)] | Port iic_sda has been placed at location V20, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 7)] | Port iic_sda has been placed at location V20, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 18)] | Port mem_dq[9] has been placed at location M2, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 18)] | Port mem_dq[9] has been placed at location M2, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 20)] | Port mem_dq[11] has been placed at location M1, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 20)] | Port mem_dq[11] has been placed at location M1, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 23)] | Port mem_dq[14] has been placed at location P3, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 23)] | Port mem_dq[14] has been placed at location P3, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 53)] | Port eth_rgmii_tx_ctl_0 has been placed at location F22, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 53)] | Port eth_rgmii_tx_ctl_0 has been placed at location F22, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 56)] | Port eth_rgmii_txd_0[1] has been placed at location E20, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 56)] | Port eth_rgmii_txd_0[1] has been placed at location E20, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 57)] | Port eth_rgmii_txd_0[2] has been placed at location E22, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 57)] | Port eth_rgmii_txd_0[2] has been placed at location E22, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 58)] | Port eth_rgmii_txd_0[3] has been placed at location F21, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 58)] | Port eth_rgmii_txd_0[3] has been placed at location F21, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 59)] | Port eth_rst_n_0 has been placed at location F19, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 59)] | Port eth_rst_n_0 has been placed at location F19, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 66)] | Port iic_scl has been placed at location V19, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 66)] | Port iic_scl has been placed at location V19, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 99)] | Port pix_clk_out has been placed at location M22, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 99)] | Port pix_clk_out has been placed at location M22, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 102)] | Port r_b_out[2] has been placed at location T21, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 102)] | Port r_b_out[2] has been placed at location T21, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 104)] | Port r_b_out[4] has been placed at location R20, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 104)] | Port r_b_out[4] has been placed at location R20, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 105)] | Port r_b_out[5] has been placed at location R22, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 105)] | Port r_b_out[5] has been placed at location R22, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 109)] | Port r_g_out[0] has been placed at location M21, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 109)] | Port r_g_out[0] has been placed at location M21, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 114)] | Port r_g_out[5] has been placed at location L19, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 114)] | Port r_g_out[5] has been placed at location L19, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 115)] | Port r_g_out[6] has been placed at location K20, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 115)] | Port r_g_out[6] has been placed at location K20, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 116)] | Port r_g_out[7] has been placed at location L17, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 116)] | Port r_g_out[7] has been placed at location L17, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 118)] | Port r_r_out[0] has been placed at location K17, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 118)] | Port r_r_out[0] has been placed at location K17, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 123)] | Port r_r_out[5] has been placed at location H21, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 123)] | Port r_r_out[5] has been placed at location H21, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 124)] | Port r_r_out[6] has been placed at location H22, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 124)] | Port r_r_out[6] has been placed at location H22, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 125)] | Port r_r_out[7] has been placed at location H19, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 125)] | Port r_r_out[7] has been placed at location H19, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 135)] Object 'cmos1_data[0]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 135)] Object 'cmos1_data[0]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 136)] Object 'cmos1_data[1]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 136)] Object 'cmos1_data[1]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 137)] Object 'cmos1_data[2]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 137)] Object 'cmos1_data[2]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 138)] Object 'cmos1_data[3]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 138)] Object 'cmos1_data[3]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 139)] Object 'cmos1_data[4]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 139)] Object 'cmos1_data[4]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 140)] Object 'cmos1_data[5]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 140)] Object 'cmos1_data[5]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 141)] Object 'cmos1_data[6]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 141)] Object 'cmos1_data[6]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 142)] Object 'cmos1_data[7]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 142)] Object 'cmos1_data[7]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 143)] Object 'cmos1_href' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 143)] Object 'cmos1_href' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 144)] Object 'cmos1_pclk' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 144)] Object 'cmos1_pclk' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 145)] Object 'cmos1_vsync' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 145)] Object 'cmos1_vsync' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 146)] Object 'cmos2_data[0]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 146)] Object 'cmos2_data[0]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 147)] Object 'cmos2_data[1]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 147)] Object 'cmos2_data[1]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 148)] Object 'cmos2_data[2]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 148)] Object 'cmos2_data[2]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 149)] Object 'cmos2_data[3]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 149)] Object 'cmos2_data[3]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 150)] Object 'cmos2_data[4]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 150)] Object 'cmos2_data[4]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 151)] Object 'cmos2_data[5]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 151)] Object 'cmos2_data[5]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 152)] Object 'cmos2_data[6]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 152)] Object 'cmos2_data[6]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 153)] Object 'cmos2_data[7]' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 153)] Object 'cmos2_data[7]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 154)] Object 'cmos2_href' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 154)] Object 'cmos2_href' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 155)] Object 'cmos2_pclk' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 155)] Object 'cmos2_pclk' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 156)] Object 'cmos2_vsync' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 156)] Object 'cmos2_vsync' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 163)] | Port eth_rgmii_rxd_0[3] has been placed at location F18, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 163)] | Port eth_rgmii_rxd_0[3] has been placed at location F18, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 165)] | Port g_in[1] has been placed at location V17, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 165)] | Port g_in[1] has been placed at location V17, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 166)] | Port g_in[2] has been placed at location W18, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 166)] | Port g_in[2] has been placed at location W18, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 167)] | Port g_in[3] has been placed at location AB19, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 167)] | Port g_in[3] has been placed at location AB19, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 168)] | Port g_in[4] has been placed at location AA18, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 168)] | Port g_in[4] has been placed at location AA18, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 169)] | Port g_in[5] has been placed at location AB18, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 169)] | Port g_in[5] has been placed at location AB18, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 172)] Object 'hs_in' is dangling, which has no connection. it will be ignored.</data>
+            <data message="6">ConstraintEditor-2001: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 172)] Object 'hs_in' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 173)] | Port pcie_perst_n has been placed at location A19, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 173)] | Port pcie_perst_n has been placed at location A19, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 174)] | Port pix_clk_in has been placed at location AA12, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 174)] | Port pix_clk_in has been placed at location AA12, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/7/device_map/ddr_test_top.pcf(line number: 184)] | Port rst_board has been placed at location K18, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/device_map/ddr_test_top.pcf(line number: 184)] | Port rst_board has been placed at location K18, whose type is share pin.</data>
         </row>
         <row>
             <data message="4">Column Clock Check open.</data>
@@ -14265,7 +14265,7 @@
                     <data>clkbufg_5/gopclkbufg</data>
                     <data>USCM_84_110</data>
                     <data>ntclkbufg_2</data>
-                    <data>806</data>
+                    <data>830</data>
                     <data>0</data>
                     <data>pix_clk_in_ibuf/opit_1</data>
                     <data>INCK</data>
@@ -14383,10 +14383,10 @@
                     <data>I_ipsxb_ddr_top/u_ipsxb_ddrphy_pll_0/u_pll_e3/goppll</data>
                     <data>PLL_158_199</data>
                     <data>CLKIN2</data>
-                    <data>ntR2283</data>
+                    <data>ntR2290</data>
                     <data> - </data>
                     <data> - </data>
-                    <data>GND_631</data>
+                    <data>GND_561</data>
                     <data>Z</data>
                     <data>HARD0N1_156_197</data>
                 </row>
@@ -14416,10 +14416,10 @@
                     <data>I_ipsxb_ddr_top/u_ipsxb_ddrphy_pll_1/u_pll_e3/goppll</data>
                     <data>PLL_158_179</data>
                     <data>CLKIN2</data>
-                    <data>ntR2287</data>
+                    <data>ntR2294</data>
                     <data> - </data>
                     <data> - </data>
-                    <data>GND_1090</data>
+                    <data>GND_1099</data>
                     <data>Z</data>
                     <data>HARD0N1_156_181</data>
                 </row>
@@ -14449,10 +14449,10 @@
                     <data>user_pll_cfg/u_pll_e3/goppll</data>
                     <data>PLL_158_55</data>
                     <data>CLKIN2</data>
-                    <data>ntR3227</data>
+                    <data>ntR3241</data>
                     <data> - </data>
                     <data> - </data>
-                    <data>GND_1091</data>
+                    <data>GND_1100</data>
                     <data>Z</data>
                     <data>HARD0N1_156_57</data>
                 </row>
@@ -14482,10 +14482,10 @@
                     <data>user_pll_video_out/u_pll_e3/goppll</data>
                     <data>PLL_158_75</data>
                     <data>CLKIN2</data>
-                    <data>ntR3231</data>
+                    <data>ntR3245</data>
                     <data> - </data>
                     <data> - </data>
-                    <data>GND_9</data>
+                    <data>GND_12</data>
                     <data>Z</data>
                     <data>HARD0N1_156_73</data>
                 </row>

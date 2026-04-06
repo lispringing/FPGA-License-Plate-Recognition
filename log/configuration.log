@@ -15228,3 +15228,141 @@
 [Debug] [2026-3-25 19:26:11] COMMAND[Program] execute successfully, takes 2.0 secs.
 [Debug] [2026-3-25 19:26:11] End to send programming cmd.
 [Info] [2026-3-25 19:28:21] /***************************End Configration***************************/
+[Info] [2026-3-27 19:32:54] /***************************Start Configuration***************************/
+[Info] [2026-3-27 19:32:54] Path: D:/PDS_2022.1/bin
+[Info] [2026-3-27 19:32:54] Version: 99559
+[Info] [2026-3-27 19:32:55] Current Path: C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition
+[Info] [2026-3-27 19:32:55] PDS Dir Path: C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition
+[Info] [2026-3-27 19:33:07] Configuration is not connect with server. connect first then scan chain.
+[Debug] [2026-3-27 19:33:07] Client Local host name:??????????
+[Debug] [2026-3-27 19:33:07] Client Local Address:192.168.43.90
+[Debug] [2026-3-27 19:33:07] Server Address:127.0.0.1, Port:65420
+[Info] [2026-3-27 19:33:08] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-3-27 19:33:08] Finish.
+[Info] [2026-3-27 19:33:08] Connect server succeeded
+[Debug] [2026-3-27 19:33:08] Send RPC:1
+[Debug] [2026-3-27 19:33:08] Send cmd [check version information:40005] OK
+[Debug] [2026-3-27 19:33:08] Send RPC:2
+[Debug] [2026-3-27 19:33:08] Send cmd [get_cable_paras:40011] OK
+[Debug] [2026-3-27 19:33:08] Begin to send initialize chain cmd...
+[Debug] [2026-3-27 19:33:08] Send RPC:3
+[Debug] [2026-3-27 19:33:08] Send cmd [Open config cable:20001] OK
+[Debug] [2026-3-27 19:33:08] End to send initialize chain cmd.
+[Debug] [2026-3-27 19:33:08] COMMAND[check version information] execute successfully, takes 0.3 secs.
+[Debug] [2026-3-27 19:33:09] COMMAND[get_cable_paras] execute successfully, takes 1.1 secs.
+[Error] [2026-3-27 19:33:13] fail to exec Open config cable cmd...
+[Debug] [2026-3-27 19:33:15] Begin to send initialize chain cmd...
+[Debug] [2026-3-27 19:33:15] Send RPC:4
+[Debug] [2026-3-27 19:33:15] Send cmd [Open config cable:20001] OK
+[Debug] [2026-3-27 19:33:15] End to send initialize chain cmd.
+[Error] [2026-3-27 19:33:19] fail to exec Open config cable cmd...
+[Debug] [2026-3-27 19:33:42] Begin to send initialize chain cmd...
+[Debug] [2026-3-27 19:33:42] Send RPC:5
+[Debug] [2026-3-27 19:33:42] Send cmd [Open config cable:20001] OK
+[Debug] [2026-3-27 19:33:42] End to send initialize chain cmd.
+[Debug] [2026-3-27 19:33:42] begin the exec of open cable cmd...
+[Debug] [2026-3-27 19:33:42] Begin to deal with chain from server...
+[Debug] [2026-3-27 19:33:42] Begin to set user chain...
+[Debug] [2026-3-27 19:33:42] End to set user chain.
+[Debug] [2026-3-27 19:33:42] Begin to update graphic item and tree item ...
+[Debug] [2026-3-27 19:33:42] End to update graphic item and tree item ...
+[Info] [2026-3-27 19:33:44] set OpenLastPath: C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/generate_bitstream/test_ddr.sbit
+[Debug] [2026-3-27 19:33:44] begin to get device info from CFG file...
+[Debug] [2026-3-27 19:33:44] end to get device info from CFG file...
+[Debug] [2026-3-27 19:33:44] Begin to update graphic item and tree item ...
+[Debug] [2026-3-27 19:33:44] End to update graphic item and tree item ...
+[Debug] [2026-3-27 19:33:44] End to deal wiht chain from server.
+[Debug] [2026-3-27 19:33:44] end the exec of open cable cmd.
+[Debug] [2026-3-27 19:33:44] COMMAND[Open config cable] execute successfully, takes 1.8 secs.
+[Debug] [2026-3-27 19:33:45] Begin to send programming cmd...
+[Debug] [2026-3-27 19:33:45] Send RPC:6
+[Debug] [2026-3-27 19:33:45] Begin to send program data.
+[Debug] [2026-3-27 19:33:45] End to send program data.
+[Debug] [2026-3-27 19:33:45] Send cmd [Program:20002] OK
+[Debug] [2026-3-27 19:33:45] The value of Progress is 6
+[Debug] [2026-3-27 19:33:45] The value of Progress is 10
+[Debug] [2026-3-27 19:33:45] The value of Progress is 15
+[Debug] [2026-3-27 19:33:45] The value of Progress is 20
+[Debug] [2026-3-27 19:33:45] The value of Progress is 25
+[Debug] [2026-3-27 19:33:45] The value of Progress is 30
+[Debug] [2026-3-27 19:33:45] The value of Progress is 35
+[Debug] [2026-3-27 19:33:46] The value of Progress is 40
+[Debug] [2026-3-27 19:33:46] The value of Progress is 45
+[Debug] [2026-3-27 19:33:46] The value of Progress is 50
+[Debug] [2026-3-27 19:33:46] The value of Progress is 55
+[Debug] [2026-3-27 19:33:46] The value of Progress is 60
+[Debug] [2026-3-27 19:33:46] The value of Progress is 65
+[Debug] [2026-3-27 19:33:46] The value of Progress is 70
+[Debug] [2026-3-27 19:33:46] The value of Progress is 75
+[Debug] [2026-3-27 19:33:46] The value of Progress is 80
+[Debug] [2026-3-27 19:33:46] The value of Progress is 85
+[Debug] [2026-3-27 19:33:46] The value of Progress is 90
+[Debug] [2026-3-27 19:33:47] The value of Progress is 95
+[Debug] [2026-3-27 19:33:47] The value of Progress is 100
+[Debug] [2026-3-27 19:33:47] COMMAND[Program] execute successfully, takes 2.0 secs.
+[Debug] [2026-3-27 19:33:47] End to send programming cmd.
+[Info] [2026-3-27 19:35:34] /***************************End Configration***************************/
+[Info] [2026-3-27 19:47:30] /***************************Start Configuration***************************/
+[Info] [2026-3-27 19:47:30] Path: D:/PDS_2022.1/bin
+[Info] [2026-3-27 19:47:30] Version: 99559
+[Info] [2026-3-27 19:47:31] Current Path: C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition
+[Info] [2026-3-27 19:47:31] PDS Dir Path: C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition
+[Info] [2026-3-27 19:47:33] Configuration is not connect with server. connect first then scan chain.
+[Debug] [2026-3-27 19:47:33] Client Local host name:??????????
+[Debug] [2026-3-27 19:47:33] Client Local Address:192.168.43.90
+[Debug] [2026-3-27 19:47:33] Server Address:127.0.0.1, Port:65420
+[Info] [2026-3-27 19:47:34] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-3-27 19:47:34] Finish.
+[Info] [2026-3-27 19:47:34] Connect server succeeded
+[Debug] [2026-3-27 19:47:34] Send RPC:1
+[Debug] [2026-3-27 19:47:34] Send cmd [check version information:40005] OK
+[Debug] [2026-3-27 19:47:34] Send RPC:2
+[Debug] [2026-3-27 19:47:34] Send cmd [get_cable_paras:40011] OK
+[Debug] [2026-3-27 19:47:34] Begin to send initialize chain cmd...
+[Debug] [2026-3-27 19:47:34] Send RPC:3
+[Debug] [2026-3-27 19:47:34] Send cmd [Open config cable:20001] OK
+[Debug] [2026-3-27 19:47:34] End to send initialize chain cmd.
+[Debug] [2026-3-27 19:47:34] COMMAND[check version information] execute successfully, takes 0.1 secs.
+[Debug] [2026-3-27 19:47:35] COMMAND[get_cable_paras] execute successfully, takes 1.0 secs.
+[Debug] [2026-3-27 19:47:35] begin the exec of open cable cmd...
+[Debug] [2026-3-27 19:47:35] Begin to deal with chain from server...
+[Debug] [2026-3-27 19:47:35] Begin to set user chain...
+[Debug] [2026-3-27 19:47:35] End to set user chain.
+[Debug] [2026-3-27 19:47:35] Begin to update graphic item and tree item ...
+[Debug] [2026-3-27 19:47:35] End to update graphic item and tree item ...
+[Info] [2026-3-27 19:47:37] set OpenLastPath: C:/Users/happuking/Desktop/FPGA-License-Plate-Recognition/generate_bitstream/test_ddr.sbit
+[Debug] [2026-3-27 19:47:37] begin to get device info from CFG file...
+[Debug] [2026-3-27 19:47:37] end to get device info from CFG file...
+[Debug] [2026-3-27 19:47:37] Begin to update graphic item and tree item ...
+[Debug] [2026-3-27 19:47:37] End to update graphic item and tree item ...
+[Debug] [2026-3-27 19:47:37] End to deal wiht chain from server.
+[Debug] [2026-3-27 19:47:37] end the exec of open cable cmd.
+[Debug] [2026-3-27 19:47:37] COMMAND[Open config cable] execute successfully, takes 3.2 secs.
+[Debug] [2026-3-27 19:47:38] Begin to send programming cmd...
+[Debug] [2026-3-27 19:47:38] Send RPC:4
+[Debug] [2026-3-27 19:47:38] Begin to send program data.
+[Debug] [2026-3-27 19:47:38] End to send program data.
+[Debug] [2026-3-27 19:47:38] Send cmd [Program:20002] OK
+[Debug] [2026-3-27 19:47:38] The value of Progress is 6
+[Debug] [2026-3-27 19:47:38] The value of Progress is 10
+[Debug] [2026-3-27 19:47:38] The value of Progress is 15
+[Debug] [2026-3-27 19:47:38] The value of Progress is 20
+[Debug] [2026-3-27 19:47:39] The value of Progress is 25
+[Debug] [2026-3-27 19:47:39] The value of Progress is 30
+[Debug] [2026-3-27 19:47:39] The value of Progress is 35
+[Debug] [2026-3-27 19:47:39] The value of Progress is 40
+[Debug] [2026-3-27 19:47:39] The value of Progress is 45
+[Debug] [2026-3-27 19:47:39] The value of Progress is 50
+[Debug] [2026-3-27 19:47:39] The value of Progress is 55
+[Debug] [2026-3-27 19:47:39] The value of Progress is 60
+[Debug] [2026-3-27 19:47:39] The value of Progress is 65
+[Debug] [2026-3-27 19:47:39] The value of Progress is 70
+[Debug] [2026-3-27 19:47:39] The value of Progress is 75
+[Debug] [2026-3-27 19:47:40] The value of Progress is 80
+[Debug] [2026-3-27 19:47:40] The value of Progress is 85
+[Debug] [2026-3-27 19:47:40] The value of Progress is 90
+[Debug] [2026-3-27 19:47:40] The value of Progress is 95
+[Debug] [2026-3-27 19:47:40] The value of Progress is 100
+[Debug] [2026-3-27 19:47:40] COMMAND[Program] execute successfully, takes 2.0 secs.
+[Debug] [2026-3-27 19:47:40] End to send programming cmd.
+[Info] [2026-3-27 19:48:47] /***************************End Configration***************************/
