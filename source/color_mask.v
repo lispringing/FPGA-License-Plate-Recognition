@@ -7,8 +7,10 @@ module color_mask #(
 )(
     input  wire        clk,
     input  wire        rst_n,
+    input  wire        vs_in, 
     input  wire        de_in,
     input  wire [31:0] rgb_in,
+    output reg         vs_out,
     output reg         de_out,
     output reg  [31:0] rgb_out
 );
@@ -54,6 +56,13 @@ module color_mask #(
             else
                 rgb_out <= 32'h404040;  // 灰色背景
         end
+    end
+
+    always @(posedge clk or negedge rst_n) begin
+    if (!rst_n)
+        vs_out <= 1'b0;
+    else
+        vs_out <= vs_in;  // 和 de_out <= de_in 同级
     end
 
 endmodule

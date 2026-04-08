@@ -3759,3 +3759,635 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/fpga-liscence/source/simple_plate_box.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/fpga-liscence/source/sobel_edge.v"
+add_design "C:/Users/happuking/Desktop/fpga-liscence/source/edge_hough_plate.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/fpga-liscence/source/sobel_vertical.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/fpga-liscence/source/Hough.v"
+add_design "C:/Users/happuking/Desktop/fpga-liscence/source/redbox.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+remove_design -force -verilog "C:/Users/happuking/Desktop/fpga-liscence/source/simple_plate_box.v"
+remove_design -force -verilog "C:/Users/happuking/Desktop/fpga-liscence/source/Hough.v"
+remove_design -force -verilog "C:/Users/happuking/Desktop/fpga-liscence/source/redbox.v"
+remove_design -force -verilog "C:/Users/happuking/Desktop/fpga-liscence/source/plate_adaptive_no_roi.v"
+remove_design -force -verilog "C:/Users/happuking/Desktop/fpga-liscence/source/license_plate_loc.v"
+remove_design -force -verilog "C:/Users/happuking/Desktop/fpga-liscence/source/edge_hough_plate.v"
+remove_design -force -verilog "C:/Users/happuking/Desktop/fpga-liscence/source/sobel_edge.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/binarization.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/matrix_gen_3x3_simple.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/erosion.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/big.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/detect.v"
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/box.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/protect.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+remove_design -force -verilog "C:/Users/happuking/Desktop/BCAKup/source/source/protect.v"
+remove_design -force -verilog "C:/Users/happuking/Desktop/BCAKup/source/source/box.v"
+remove_design -verilog "C:/Users/happuking/Desktop/BCAKup/source/source/detect.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/horizon_proj.v"
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/vertical_proj.v"
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/1.v"
+add_design C:/Users/happuking/Desktop/BCAKup/source/ipcore/dual_port_ram/dual_port_ram.idf
+remove_design -force -verilog "C:/Users/happuking/Desktop/BCAKup/source/source/1.v"
+remove_design -force C:/Users/happuking/Desktop/BCAKup/source/ipcore/dual_port_ram/dual_port_ram.idf
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/plate_locate.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+synthesize -ads -selected_syn_tool_opt 2 
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+remove_design -force -verilog "C:/Users/happuking/Desktop/BCAKup/source/source/vertical_proj.v"
+remove_design -force -verilog "C:/Users/happuking/Desktop/BCAKup/source/source/plate_locate.v"
+remove_design -force -verilog "C:/Users/happuking/Desktop/BCAKup/source/source/horizon_proj.v"
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/horizon_proj.v"
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/vertical_proj.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/plate_locate.v"
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+add_design "C:/Users/happuking/Desktop/BCAKup/source/source/draw.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -system_verilog -top_module test_ddr
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream 

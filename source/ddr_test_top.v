@@ -1,14 +1,15 @@
-// Created by IP Generator (Version 2022.1 build 99559)
 // 小春子
+// 图灵老祖保佑显灵
+
 `timescale 1ps/1ps
 `define DDR3
 module test_ddr #(
-  parameter PCIE_ENABLE          = 1                   ,
-  parameter PROJECT_MODE         = 1                    ,
-  parameter VIDEO_LENGTH         = 1920                 ,
-  parameter VIDEO_HIGTH          = 1080                 ,
-  parameter ZOOM_VIDEO_LENGTH    = 960                 ,
-  parameter ZOOM_VIDEO_HIGTH     = 540                 ,
+  parameter PCIE_ENABLE          = 1                  ,
+  parameter PROJECT_MODE         = 1                  ,
+  parameter VIDEO_LENGTH         = 1920               ,
+  parameter VIDEO_HIGTH          = 1080               ,
+  parameter ZOOM_VIDEO_LENGTH    = 960                ,
+  parameter ZOOM_VIDEO_HIGTH     = 540                ,
   parameter PIXEL_WIDTH          = 32                 ,    
   parameter MEM_ROW_ADDR_WIDTH   = 15                 , 
   parameter MEM_COL_ADDR_WIDTH   = 10                 ,
@@ -22,8 +23,8 @@ module test_ddr #(
   parameter CTRL_ADDR_WIDTH      = MEM_ROW_ADDR_WIDTH + MEM_BADDR_WIDTH + MEM_COL_ADDR_WIDTH
 )(
   input                                  ref_clk         ,
-  input                                  rst_board       /* synthesis syn_keep="1" */,
-  output                                 ddr_pll_lock        ,           
+  input                                  rst_board       ,
+  output                                 ddr_pll_lock    ,           
   output                                 ddr_init_done   ,
   //DDR 
   output                                 mem_rst_n       ,                       
@@ -42,16 +43,16 @@ module test_ddr #(
   inout      [MEM_DQ_WIDTH-1:0]          mem_dq          ,
   output     [MEM_DM_WIDTH-1:0]          mem_dm          ,
 //MS72XX
-  output wire                               hdmi_rst   ,
-  output                                   iic_tx_scl        ,
-  inout                                    iic_tx_sda        ,
-  output                                   iic_scl            ,
-  inout                                    iic_sda            ,
-  output wire                              hdmi_int_led      ,
-  output wire                              fram0_done         ,
-  output wire                              fram1_done         ,
-  output wire                              fram2_done         ,
-  output wire                              fram3_done         ,
+  output wire                            hdmi_rst        ,
+  output                                 iic_tx_scl      ,
+  inout                                  iic_tx_sda      ,
+  output                                 iic_scl         ,
+  inout                                  iic_sda         ,
+  output wire                            hdmi_int_led    ,
+  output wire                            fram0_done      ,
+  output wire                            fram1_done      ,
+  output wire                            fram2_done      ,
+  output wire                            fram3_done      ,
 //HDMI IN
   input wire                               pix_clk_in      ,//HDMI 1080p @148.5Mhz
   input wire                               vs_in           /* synthesis PAP_MARK_DEBUG="1" */,
@@ -164,9 +165,6 @@ wire  [31 : 0]                        video0_data_out/* synthesis PAP_MARK_DEBUG
 wire  [31 : 0]                        video1_data_out/* synthesis PAP_MARK_DEBUG="1" */;
 wire  [31 : 0]                        video2_data_out/* synthesis PAP_MARK_DEBUG="1" */;
 wire  [31 : 0]                        video3_data_out/* synthesis PAP_MARK_DEBUG="1" */;
-
-
-
 //wire                                    fram_done;
 //iic
 wire                                 iic_clk;//10mhz
@@ -174,14 +172,11 @@ wire                                 pll_init_done;
 wire                                 [11 : 0] x_act /* synthesis PAP_MARK_DEBUG="1" */;
 wire                                 [11 : 0] y_act /* synthesis PAP_MARK_DEBUG="1" */;
 //wire                                 hdmi_rst;
-
 wire                                vs_out/* synthesis PAP_MARK_DEBUG="1" */;
 wire                                hs_out;
 wire                                de_out/* synthesis PAP_MARK_DEBUG="1" */;
-
 wire                                zoom_de_out/* synthesis PAP_MARK_DEBUG="1" */;
 wire [PIXEL_WIDTH - 1: 0]           zoom_data_out;
-
 wire                                clk_25M;
 wire [1:0]                          cmos_init_done/* synthesis PAP_MARK_DEBUG="1" */;
 wire [15:0]                         cmos1_d_16bit;
@@ -190,36 +185,22 @@ wire                                cmos1_pclk_16bit;
 wire[15:0]                          cmos2_d_16bit       /*synthesis PAP_MARK_DEBUG="1"*/;
 wire                                cmos2_href_16bit    /*synthesis PAP_MARK_DEBUG="1"*/;
 wire                                cmos2_pclk_16bit    /*synthesis PAP_MARK_DEBUG="1"*/;
-//灰度化模块中转信号
+//色彩遮掩
+wire        mask_de;
+wire [31:0] mask_rgb;
+//灰度化
 wire                                gray_de;         // 灰度化输出de
 wire    [7:0]                       gray_data;       // 灰度化输出8bit灰度
 wire    [31:0]                      gray_rgb32;      // 灰度转32bit RGB
-//中值滤波模块中转信号
+//灰度化取反
+wire    [31:0]                      inv_rgb32;
+wire                                inv_de;
+wire    [7:0]                       inv_data;
+//中值滤波
 wire            median_de;       // 滤波输出de
 wire    [7:0]   median_data;     // 滤波输出8bit灰度
 wire    [31:0]  median_rgb32;    // 滤波转32bit RGB
-//二值化
-wire            plate_de;
-wire    [7:0]   plate_data;
-wire    [31:0]  plate_rgb32;
-// 【形态学处理】新增wire
-wire            morph_de;        // 形态学输出de
-wire    [7:0]   morph_data;      // 形态学输出二值图
-wire    [31:0]  morph_rgb32;     // 转32bit RGB给FIFO
-// 【新增】车牌定位模块中转信号
-wire            loc_de;          // 定位模块输出de
-wire    [31:0]  loc_rgb_out;     // 定位模块输出带红框的RGB32
-// 【新增】自适应二值化模块中转信号
-//wire            bin_de;          // 二值化输出de
-//wire    [7:0]   bin_data;        // 二值化输出（0或255）
-//wire    [31:0]  bin_rgb32;       // 二值化转32bit RGB（给fifo3）
-// 【新增】形态学操作模块中转信号
-//wire            morph_de;        // 形态学输出de
-//wire    [7:0]   morph_data;      // 形态学输出（0或255）
-//wire    [31:0]  morph_rgb32;     // 形态学转32bit RGB（给fifo3）
-// 【新增】车牌定位模块中转信号
-//wire            loc_de;          // 定位模块输出de
-//wire    [31:0]  loc_rgb_out;     // 定位模块输出带红框的RGB32
+
 /******************************reg********************************************/
 reg [11 : 0]              de_in_cnt    /* synthesis PAP_MARK_DEBUG="1" */;
 reg                       de_in_d0     /* synthesis PAP_MARK_DEBUG="1" */;
@@ -264,11 +245,8 @@ reg                         cmos2_vsync_d0      /*synthesis PAP_MARK_DEBUG="1"*/
 
 reg [2:0]                   out_state            /*synthesis PAP_MARK_DEBUG="1"*/;
 /******************************assign********************************************/
-//assign pix_clk_out = pix_clk_in         ;//HDMI�������ʱ����ͬ 1080p ����ʹ��
-//       bits31-22 R��bits21-12 G��bits11-2 B������λ����
 assign des_mac       = DES_MAC;
 assign des_ip        = DES_IP;
-
 assign rgb_in[31:24] = r_in;
 assign rgb_in[23:22] = 2'd0;
 assign rgb_in[21:14] = g_in;
@@ -276,47 +254,7 @@ assign rgb_in[13:12] = 2'd0;
 assign rgb_in[11: 4] = b_in;
 assign rgb_in[3 : 2] = 2'd0;
 assign rgb_in[1 : 0] = 2'd0;
-// 【新增】8bit灰度转32bit RGB（R=G=B=灰度值，显示黑白图）
-assign gray_rgb32[31:24] = gray_data;  // R通道
-assign gray_rgb32[23:22] = 2'd0;
-assign gray_rgb32[21:14] = gray_data;  // G通道
-assign gray_rgb32[13:12] = 2'd0;
-assign gray_rgb32[11:4]  = gray_data;  // B通道
-assign gray_rgb32[3:2]   = 2'd0;
-assign gray_rgb32[1:0]   = 2'd0;
-// 【新增】8bit滤波后灰度转32bit RGB
-assign median_rgb32[31:24] = median_data;
-assign median_rgb32[23:22] = 2'd0;
-assign median_rgb32[21:14] = median_data;
-assign median_rgb32[13:12] = 2'd0;
-assign median_rgb32[11:4]  = median_data;
-assign median_rgb32[3:2]   = 2'd0;
-assign median_rgb32[1:0]   = 2'd0;
-/*//二值化
-assign plate_rgb32[31:24] = plate_data;
-assign plate_rgb32[23:22] = 2'd0;
-assign plate_rgb32[21:14] = plate_data;
-assign plate_rgb32[13:12] = 2'd0;
-assign plate_rgb32[11:4]  = plate_data;
-assign plate_rgb32[3:2]   = 2'd0;
-assign plate_rgb32[1:0]   = 2'd0;*/
 
-/*// 形态学结果转32bit RGB（适配FIFO显示格式）
-assign morph_rgb32[31:24] = morph_data;
-assign morph_rgb32[23:22] = 2'd0;
-assign morph_rgb32[21:14] = morph_data;
-assign morph_rgb32[13:12] = 2'd0;
-assign morph_rgb32[11:4]  = morph_data;
-assign morph_rgb32[3:2]   = 2'd0;
-assign morph_rgb32[1:0]   = 2'd0;
-assign morph_rgb32[31:24] = final_data;
-assign morph_rgb32[23:22] = 2'd0;
-assign morph_rgb32[21:14] = final_data;
-assign morph_rgb32[13:12] = 2'd0;
-assign morph_rgb32[11:4]  = final_data;
-assign morph_rgb32[3:2]   = 2'd0;
-assign morph_rgb32[1:0]   = 2'd0;
-//assign rgb_in = de_in ? {r_in[7:3] , g_in[7:2] , b_in[7:3]} : 16'b0;*/
 assign eth_rst_n_0 = ddr_ip_rst_n;
 //��ʱ
 //assign de_out                 =       ddr_init_done? 1'b1 : 1'b0;
@@ -694,6 +632,9 @@ ipsxb_rst_sync_v1_1 u_core_clk_rst_sync(
     .sig_synced                 (ddr_ip_rst_n   )
 );
 
+
+
+
 //��ʼ��˳��DDR->AXI_M & FIFO ->IIC PLL -HDMI
 axi_m_arbitration #(
     .VIDEO_LENGTH     (VIDEO_LENGTH)                    ,
@@ -740,160 +681,359 @@ user_axi_m_arbitration (
     //video
     .vs_in                   (vs_in       ),
     .vs_out                  (vs_out      ),
-//fifo0�ź�          
-    .video0_clk_in           (pix_clk_in),                                                                                                                  
-    .video0_de_in            (mask_de    ),
-    .video0_data_in          (mask_rgb  ),
-    .video0_rd_en            (video0_rd_en   ),
-    .video0_data_out         (video0_data_out),
-    .fram0_done              (fram0_done     ),
-    .video0_vs_in            (vs_in ),//����ץȡ��λ
-//fifo1信号：【替换】灰度化图 → 左上/加入中值滤波了
+
+
+
+
+
+
+//视频流水线处理区域
+//fifo0显示区域       
+.video0_clk_in           (pix_clk_in),                                                                                                                  
+.video0_de_in            (mask_de), //色彩遮掩
+.video0_data_in          (mask_rgb),
+.video0_rd_en            (video0_rd_en),
+.video0_data_out         (video0_data_out),
+.fram0_done              (fram0_done),
+.video0_vs_in            (vs_in ),
+//fifo1显示区域
 .video1_clk_in           (pix_clk_in),                                                               
-.video1_de_in            (median_de),       // 【修改】对接中值滤波的de_out
-.video1_data_in          (median_rgb32),    // 【修改】对接中值滤波的32bit RGB
-.video1_rd_en            (video1_rd_en   ),
+.video1_de_in            (bin_de),       //滤波之后的 
+.video1_data_in          (bin_rgb32),
+.video1_rd_en            (video1_rd_en),     
 .video1_data_out         (video1_data_out),
-.fram1_done              (fram1_done     ),
+.fram1_done              (fram1_done),
 .video1_vs_in            (vs_in ),
-    //.video1_clk_in           (rgmii_clk_0    ),    
-    //.video1_de_in            (eth0_rx_de     ),
-    //.video1_data_in          ({eth0_rx_data[15:11],5'b0,eth0_rx_data[10:5],4'b0,eth0_rx_data[4:0],7'b0} ),
-    //.video1_rd_en            (video1_rd_en   ),
-    //.video1_data_out         (video1_data_out),
-    //.fram1_done              (fram1_done     ),
-    //.video1_vs_in            (eth0_rx_vs     ),//����ץȡ��λ
-// FIFO2 - 左下显示区域：自适应二值化车牌检测结果
+//fifo2显示区域
 .video2_clk_in           (pix_clk_in),                       
-.video2_de_in            (plate_de),          // 接车牌模块的de_out
-.video2_data_in          (plate_rgb32),       // 接车牌模块的32bit RGB    plate_rgb32
+.video2_de_in            (erode_de),          
+.video2_data_in          (erode_rgb32),       
 .video2_rd_en            (video2_rd_en),
 .video2_data_out         (video2_data_out),
 .fram2_done              (fram2_done),
 .video2_vs_in            (vs_in),
-//fifo3信号：【替换】车牌定位带红框画面 → 右下
-.video3_clk_in           (pix_clk_in),                       
-.video3_de_in            (loc_de),          // 【修改】对接定位模块的de_out
-.video3_data_in          (loc_rgb_out),     // 【修改】对接定位模块的RGB输出
-.video3_rd_en            (video3_rd_en   ),
+//fifo3显示区域
+.video3_clk_in           (pix_clk_in),
+.video3_de_in            (draw_de),
+.video3_data_in          (draw_rgb32),  // 画框后的32位颜色
+.video3_rd_en            (video3_rd_en),
 .video3_data_out         (video3_data_out),
 .fram3_done              (fram3_done),
-.video3_vs_in            (vs_in),
-    .wr_addr_min             (RW_ADDR_MIN),//д����ddr��С��ַ0��ַ��ʼ�㣬1920*1080*16 = 33177600 bits
-    .wr_addr_max             (RW_ADDR_MAX), //д����ddr����ַ��һ����ַ��32λ 33177600/32 = 1036800 = 20'b1111_1101_0010_0000_0000
-    .y_act                   (y_act)        , 
-    .x_act                   (x_act)  
+.video3_vs_in            (draw_vs),
 
+
+.wr_addr_min             (RW_ADDR_MIN),//д����ddr��С��ַ0��ַ��ʼ�㣬1920*1080*16 = 33177600 bits
+.wr_addr_max             (RW_ADDR_MAX), //д����ddr����ַ��һ����ַ��32λ 33177600/32 = 1036800 = 20'b1111_1101_0010_0000_0000
+.y_act                   (y_act), 
+.x_act                   (x_act)  
 );
 
 sync_generator user_sync_gen(
-    .clk       (pix_clk_out ),//1080p�ο�ʱ��Ϊ148.5mhz
-    .rstn      (ddr_ip_rst_n && ddr_init_done),
-    .vs_out    (vs_out),
-    .hs_out    (hs_out),
-    .de_out    (de_out),
-    .de_re     (),
-    .x_act     (x_act),
-    .y_act     (y_act)
+    .clk                (pix_clk_out ),//1080p�ο�ʱ��Ϊ148.5mhz
+    .rstn               (ddr_ip_rst_n && ddr_init_done),
+    .vs_out             (vs_out),
+    .hs_out             (hs_out),
+    .de_out             (de_out),
+    .de_re              (),
+    .x_act              (x_act),
+    .y_act              (y_act)
 );
-
+//缩放模块
 video_zoom hdmi_video_zoom(
     .clk                (pix_clk_in),
     .rstn               (ddr_ip_rst_n && ddr_init_done),
-    .vs_in              (vs_in                        ) ,
-    .hs_in              (hs_in                        ) ,
-    .de_in              (de_in                        ) ,
-    .video_data_in      (rgb_in                       ),
-    .de_out             (zoom_de_out                  ),
-    .video_data_out     (zoom_data_out                )
+    .vs_in              (vs_in),
+    .hs_in              (hs_in),
+    .de_in              (de_in),
+    .video_data_in      (rgb_in),
+    .de_out             (zoom_de_out),
+    .video_data_out     (zoom_data_out)
    );
-
-
-// ===== 新增：颜色掩码模块 =====
-wire        mask_de;
-wire [31:0] mask_rgb;
+//色彩遮掩
+// 颜色掩码模块（YCbCr版本，更强）
+// 色彩遮掩
 
 color_mask #(
-    .THRESHOLD(32),
+    .THRESHOLD(20),
     .COLOR_BLUE(1),
     .COLOR_YELLOW(1),
     .COLOR_GREEN(1),
     .COLOR_BLACK(1)
-)u_color_mask (
-    .clk    (pix_clk_in),
-    .rst_n  (ddr_ip_rst_n && ddr_init_done),
-    .de_in  (zoom_de_out),
-    .rgb_in (zoom_data_out),
-    .de_out (mask_de),
-    .rgb_out(mask_rgb)
+   
+) u_color_mask(
+    .clk                 (pix_clk_in),
+    .rst_n               (ddr_ip_rst_n && ddr_init_done),
+    .vs_in               (zoom_vs_out),      // ✅ 新增：接收 zoom 的 vs
+    .de_in               (zoom_de_out),
+    .rgb_in              (zoom_data_out),
+    .vs_out              (mask_vs_out),       // ✅ 新增
+    .de_out              (mask_de),
+    .rgb_out             (mask_rgb)
 );
 
 
-// 【新增】灰度化模块：HDMI缩放后的32bit RGB → 8bit灰度
-gray_convert u_gray_convert (
+//灰度化处理
+gray_convert u_gray_convert(
+    .clk                 (pix_clk_in),
+    .rst_n               (ddr_ip_rst_n && ddr_init_done),
+    .de_in               (mask_de),                    // 原为 zoom_de_out
+    .r_in                (mask_rgb[31:24]),            // 原为 zoom_data_out[31:24]
+    .g_in                (mask_rgb[21:14]),            // 原为 zoom_data_out[21:14]
+    .b_in                (mask_rgb[11:4]),             // 原为 zoom_data_out[11:4]
+    .de_out              (gray_de),
+    .gray_out            (gray_data)
+);
+
+// 灰度化
+assign gray_rgb32[31:24] = gray_data;  // R通道
+assign gray_rgb32[23:22] = 2'd0;
+assign gray_rgb32[21:14] = gray_data;  // G通道
+assign gray_rgb32[13:12] = 2'd0;
+assign gray_rgb32[11:4]  = gray_data;  // B通道
+assign gray_rgb32[3:2]   = 2'd0;
+assign gray_rgb32[1:0]   = 2'd0;
+
+
+//灰度化取反
+invert_gray u_invert_gray(
+    .clk                 (pix_clk_in),
+    .rst_n               (ddr_ip_rst_n && ddr_init_done),
+    .de_in               (gray_de),
+    .gray_in             (gray_data),
+    .de_out              (inv_de),
+    .gray_out            (inv_data)
+);
+
+//灰度化取反
+assign inv_rgb32[31:24] = inv_data;
+assign inv_rgb32[23:22] = 2'd0;
+assign inv_rgb32[21:14] = inv_data;
+assign inv_rgb32[13:12] = 2'd0;
+assign inv_rgb32[11:4]  = inv_data;
+assign inv_rgb32[3:2]   = 2'd0;
+assign inv_rgb32[1:0]   = 2'd0;
+
+//中值滤波
+median_filter u_median_filter(
+    .clk                (pix_clk_in),                    
+    .rst_n              (ddr_ip_rst_n && ddr_init_done), 
+    .de_in              (inv_de),                     
+    .gray_in            (inv_data),                     
+    .de_out             (median_de),                     
+    .gray_out           (median_data)                  
+);
+
+// 中值滤波
+assign median_rgb32[31:24] = median_data;
+assign median_rgb32[23:22] = 2'd0;
+assign median_rgb32[21:14] = median_data;
+assign median_rgb32[13:12] = 2'd0;
+assign median_rgb32[11:4]  = median_data;
+assign median_rgb32[3:2]   = 2'd0;
+assign median_rgb32[1:0]   = 2'd0;
+
+//二值化
+wire         bin_de;
+wire         bin_out;
+
+binarization u_binary
+(
+    .clk                (pix_clk_in),
+    .rst_n              (ddr_ip_rst_n && ddr_init_done),    
+    .de_in              (median_de),
+    .data_in            (median_data),    
+    .de_out             (bin_de),
+    .binary_out         (bin_out),   
+    .Binary_Threshold   (8'd80)
+);
+
+wire [31:0] bin_rgb32;
+assign bin_rgb32[31:24] =  bin_out ? 8'hFF : 8'h00;
+assign bin_rgb32[23:22] = 2'd0;
+assign bin_rgb32[21:14] =  bin_out ? 8'hFF : 8'h00;
+assign bin_rgb32[13:12] = 2'd0;
+assign bin_rgb32[11:4]  =  bin_out ? 8'hFF : 8'h00;
+assign bin_rgb32[3:2]   = 2'd0;
+assign bin_rgb32[1:0]   = 2'd0;
+
+
+// 腐蚀输出
+wire    erode_de;
+wire    erode_data;
+
+erosion_using_your_matrix u_erosion
+(
     .clk        (pix_clk_in),
     .rst_n      (ddr_ip_rst_n && ddr_init_done),
-    .de_in      (mask_de),                    // 原为 zoom_de_out
-    .r_in       (mask_rgb[31:24]),            // 原为 zoom_data_out[31:24]
-    .g_in       (mask_rgb[21:14]),            // 原为 zoom_data_out[21:14]
-    .b_in       (mask_rgb[11:4]),             // 原为 zoom_data_out[11:4]
-    .de_out     (gray_de),
-    .gray_out   (gray_data)
+    
+    .de_in      (bin_de),       // 二值化
+    .data_in    (bin_out),      // 二值化数据
+    
+    .de_out     (erode_de),     // 腐蚀后
+    .data_out   (erode_data)    // 腐蚀后干净二值图
 );
 
+// 腐蚀结果转 RGB32
+wire [31:0] erode_rgb32;
+assign erode_rgb32[31:24] =  erode_data ? 8'hFF : 8'h00;
+assign erode_rgb32[23:22] = 2'd0;
+assign erode_rgb32[21:14] =  erode_data ? 8'hFF : 8'h00;
+assign erode_rgb32[13:12] = 2'd0;
+assign erode_rgb32[11:4]  =  erode_data ? 8'hFF : 8'h00;
+assign erode_rgb32[3:2]   = 2'd0;
+assign erode_rgb32[1:0]   = 2'd0;
 
-// 【新增】中值滤波模块：灰度化 → 滤波
-median_filter u_median_filter(
-    .clk           (pix_clk_in),                    // 时钟：HDMI输入像素时钟
-    .rst_n         (ddr_ip_rst_n && ddr_init_done), // 复位：全局复位
-    .de_in         (gray_de),                       // 输入de：对接灰度化的de_out
-    .gray_in       (gray_data),                     // 输入灰度：对接灰度化的gray_out
-    .de_out        (median_de),                     // 输出de：给Sobel
-    .gray_out      (median_data)                    // 输出滤波后灰度：给Sobel
+
+
+
+//sobel算子
+wire sobel_de;
+wire sobel_edge;
+
+Sobel_Edge_Detector u_sobel
+(
+    .clk        (pix_clk_in),
+    .rst_n      (ddr_ip_rst_n && ddr_init_done),
+    
+    .de_in      (erode_de),       // 二值化 DE
+    .data_in    (erode_data ? 8'd255 : 8'd0), // 二值化转8位
+    
+    .de_out     (sobel_de),
+    .edge_out   (sobel_edge)
 );
 
+// Sobel 结果转 RGB32
+wire [31:0] sobel_rgb32;
+assign sobel_rgb32[31:24] =  sobel_edge ? 8'hFF : 8'h00;
+assign sobel_rgb32[23:22] = 2'd0;
+assign sobel_rgb32[21:14] =  sobel_edge ? 8'hFF : 8'h00;
+assign sobel_rgb32[13:12] = 2'd0;
+assign sobel_rgb32[11:4]  =  sobel_edge ? 8'hFF : 8'h00;
+assign sobel_rgb32[3:2]   = 2'd0;
+assign sobel_rgb32[1:0]   = 2'd0;
 
-wire        inv_de;
-wire [7:0]  inv_data;
 
 
-//灰色取反fifo2接的
-invert_gray u_invert_gray (
-    .clk      (pix_clk_in),
-    .rst_n    (ddr_ip_rst_n && ddr_init_done),
-    .de_in    (gray_de),
-    .gray_in  (gray_data),
-    .de_out   (inv_de),
-    .gray_out (inv_data)
+
+// 4. 膨胀 (Sobel后 → 边缘变粗、变连续)
+//=========================================================
+
+wire    final_de;
+wire    final_data;
+
+bit_dilation_your_matrix u_dilate
+(
+    .clk        (pix_clk_in),
+    .rst_n      (ddr_ip_rst_n && ddr_init_done),   
+    .de_in      (erode_de),        // Sobel 输出
+    .data_in    (erode_data),      // Sobel 边缘    
+    .de_out     (final_de),        // 最终 DE
+    .data_out   (final_data)       // 最终边缘
 );
 
+wire [31:0] final_rgb32;
 
+assign final_rgb32[31:24] = final_data ? 8'hFF : 8'h00;
+assign final_rgb32[23:22] = 2'd0;
+assign final_rgb32[21:14] = final_data ? 8'hFF : 8'h00;
+assign final_rgb32[13:12] = 2'd0;
+assign final_rgb32[11:4]  = final_data ? 8'hFF : 8'h00;
+assign final_rgb32[3:0]   = 4'd0;
 
-
-// 原自适应二值化模块的实例化保持不变，但将其输出重命名
-
-
-
-/*plate_morph_open u_plate_morph_open(
-    .clk           (pix_clk_in),
-    .rst_n         (ddr_ip_rst_n && ddr_init_done),
-    .de_in         (plate_de),       // 接自适应二值化的plate_de
-    .bin_in        (plate_data),      // 接自适应二值化的plate_data
-    .de_out        (morph_de),        // 输出de给FIFO2
-    .morph_out     (morph_data)       // 输出形态学结果给FIFO2
-);*/
-
-license_plate_loc u_license_plate_loc(
-    .clk           (pix_clk_in),
-    .rst_n         (ddr_ip_rst_n && ddr_init_done),
-    .de_in         (plate_de),       // ✅ 修正：对接形态学的de_out
-    .bin_in        (plate_data),     // ✅ 修正：对接形态学的morph_out
-    .original_rgb  (zoom_data_out),
-    .x_act         (x_act),
-    .y_act         (y_act),
-    .de_out        (loc_de),
-    .loc_rgb_out   (loc_rgb_out)
+// 水平投影
+wire h_proj_done;
+horizon_projection #(
+    .IMG_H(540), .IMG_W(960)
+) u_horizon (
+    .clk(pix_clk_in),
+    .rst_n(ddr_ip_rst_n && ddr_init_done),
+    .de_in(final_de),
+    .vs_in(vs_in),
+    .pixel_bit(final_data),
+    .proj_done(h_proj_done)
 );
+
+// 垂直投影
+wire v_proj_done;
+vertical_projection #(
+    .IMG_H(540), .IMG_W(960)
+) u_vertical (
+    .clk(pix_clk_in),
+    .rst_n(ddr_ip_rst_n && ddr_init_done),
+    .de_in(final_de),
+    .vs_in(vs_in),
+    .pixel_bit(final_data),
+    .proj_done(v_proj_done)
+);
+
+// 轻量化车牌定位
+wire [9:0] plate_left/* synthesis PAP_MARK_DEBUG="1" */;
+wire [9:0] plate_right/* synthesis PAP_MARK_DEBUG="1" */;
+wire [8:0] plate_top/* synthesis PAP_MARK_DEBUG="1" */;
+wire [8:0] plate_bottom/* synthesis PAP_MARK_DEBUG="1" */;
+
+plate_locate_light #(
+    .IMG_W(960), .IMG_H(540)
+) u_plate (
+    .clk(pix_clk_in),
+    .rst_n(ddr_ip_rst_n && ddr_init_done),
+    .de_in(final_de),
+    .vs_in(vs_in),
+    .pixel_bit(final_data),
+    .h_proj_done(h_proj_done),
+    .v_proj_done(v_proj_done),
+
+    .plate_left(plate_left),
+    .plate_right(plate_right),
+    .plate_top(plate_top),
+    .plate_bottom(plate_bottom)
+);
+// ==============================
+// 画框后 RGB 转 32 位 (和你风格完全一致)
+// ==============================
+//=====================================
+// 画框模块 + 32位RGB格式转换
+// 完全按照你的风格写，无语法错误
+//=====================================
+
+// 1. 画框模块输出
+wire          draw_de;
+wire          draw_vs;
+wire          draw_hs;
+wire [23:0]   draw_rgb;
+
+draw_box u_draw_box
+(
+    .clk            (pix_clk_in),
+    .rst_n          (ddr_ip_rst_n && ddr_init_done),
+    
+    .de_in          (zoom_de_out),
+    .vs_in          (vs_in),
+    .hs_in          (1'b1),
+    //.rgb_in         ({final_rgb32[31:24], final_rgb32[21:14], final_rgb32[11:4]}),
+    .rgb_in         ({zoom_data_out[31:24], zoom_data_out[21:14], zoom_data_out[11:4]}),
+    .plate_left     (plate_left),
+    .plate_right    (plate_right),
+    .plate_top      (plate_top),
+    .plate_bottom   (plate_bottom),
+
+    .de_out         (draw_de),
+    .vs_out         (draw_vs),
+    .hs_out         (draw_hs),
+    .rgb_out        (draw_rgb)
+);
+
+// 2. 画框后的RGB → 转成你一模一样的32位格式
+wire [31:0] draw_rgb32;
+
+assign draw_rgb32[31:24] = draw_rgb[23:16];
+assign draw_rgb32[23:22] = 2'd0;
+assign draw_rgb32[21:14] = draw_rgb[15:8];
+assign draw_rgb32[13:12] = 2'd0;
+assign draw_rgb32[11:4]  = draw_rgb[7:0];
+assign draw_rgb32[3:0]   = 4'd0;
+
+
 
 pll_cfg user_pll_cfg (
   .clkin1(ref_clk),        // input
@@ -1447,7 +1587,7 @@ gmii_to_rgmii eth0_gmii_to_rgmii(
 //UDPͨ��
 udp_top                                             
    #(
-    .BOARD_MAC     (BOARD_MAC),      //��������
+    .BOARD_MAC     (BOARD_MAC),  
     .BOARD_IP      (BOARD_IP ),
     .DES_MAC       (DES_MAC  ),
     .DES_IP        (DES_IP   )

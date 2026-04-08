@@ -11,67 +11,72 @@ module gray_convert (
     output reg  [7:0]  gray_out    // 8bit灰度输出：给gray_rgb32
 );
 
-// ===================== 1. 内部参数定义（适配不同车牌颜色特征）=====================
-// 分车牌类型的RGB权重（基于国内车牌底色特征优化）
-// 蓝牌：蓝底白字 → 增强蓝通道抑制
-// 黄牌：黄底黑字 → 增强红/绿通道
-// 新能源：绿底黑字 → 增强绿通道
-// 军牌：白底/红底 → 增强红通道+对比度
-localparam R_WEIGHT = 8'd85;    // 红通道权重（军牌/黄牌优化）
-localparam G_WEIGHT = 8'd155;   // 绿通道权重（新能源车牌优化）
-localparam B_WEIGHT = 8'd18;    // 蓝通道权重（蓝牌优化，降低权重）
-localparam CONTRAST_GAIN = 3'd2;// 对比度增益（1-4，2为最优平衡）
-localparam BRIGHTNESS_OFFSET = 5'd0; // 亮度偏移（避免过暗）
+// ===================== 1. 内部参数定义（只改对比度增益，其他不动）=====================
+localparam R_WEIGHT = 8'd85;
+localparam G_WEIGHT = 8'd155;
+localparam B_WEIGHT = 8'd18;
+localparam CONTRAST_GAIN = 3'd4; // 【暴力修改】对比度拉到最大
+localparam BRIGHTNESS_OFFSET = 5'd0;
 
-// ===================== 2. 内部寄存器（加宽位宽防溢出）=====================
-reg [21:0] gray_temp;  // 灰度计算中间值 (85*255+155*255+18*255=66990 < 22bit)
-reg de_d1;             // 使能1拍延迟寄存器
-reg [7:0] gray_raw;    // 原始灰度值（未增强）
-reg [9:0] gray_enhance;// 对比度增强后灰度值（扩展位宽防溢出）
+// ===================== 2. 内部寄存器（只加算法相关寄存器）=====================
+reg [21:0] gray_temp;
+reg de_d1;
+reg [7:0] gray_raw;
+reg [9:0] gray_enhance;
+reg is_blue_bg;
+reg is_yellow_bg;
+reg is_green_bg;
+reg is_bg;
 
-// ===================== 3. 时序逻辑：2拍延迟 + 增强处理 =====================
+// ===================== 3. 时序逻辑：2拍延迟（只改算法部分）=====================
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        // 复位状态：所有寄存器清零
         gray_temp   <= 22'd0;
         de_d1       <= 1'b0;
         de_out      <= 1'b0;
         gray_raw    <= 8'd0;
         gray_enhance<= 10'd0;
         gray_out    <= 8'd0;
+        is_blue_bg  <= 1'b0;
+        is_yellow_bg<= 1'b0;
+        is_green_bg <= 1'b0;
+        is_bg       <= 1'b0;
     end else begin
-        // ---------------- 第1拍：加权灰度计算（适配全车牌颜色）----------------
+        // ---------------- 第1拍：加权灰度计算 + 【暴力底色识别】----------------
         if (de_in) begin
-            // 优化权重公式：Gray = (R*85 + G*155 + B*18) / 256
-            // 权重调整逻辑：
-            // - 绿通道权重↑：新能源绿牌字符与背景对比度提升30%
-            // - 蓝通道权重↓：蓝牌底色抑制，白色字符更突出
-            // - 红通道权重微调：军牌/黄牌底色适配
             gray_temp <= (r_in * R_WEIGHT) + (g_in * G_WEIGHT) + (b_in * B_WEIGHT);
+            
+            // 【暴力修改1】更严格、更宽泛的底色识别，确保不漏掉任何一个底色像素
+            is_blue_bg  <= (b_in > r_in + 20) && (b_in > g_in + 20); // 蓝底：B明显大
+            is_yellow_bg<= (r_in > 120) && (g_in > 120) && (b_in < 110); // 黄底：RG高B低
+            is_green_bg <= (g_in > r_in + 15) && (g_in > b_in + 15); // 绿底：G明显大
+            is_bg       <= is_blue_bg || is_yellow_bg || is_green_bg;
         end else begin
-            gray_temp <= 22'd0; // de无效时清零，避免残留值
+            gray_temp <= 22'd0;
+            is_blue_bg  <= 1'b0;
+            is_yellow_bg<= 1'b0;
+            is_green_bg <= 1'b0;
+            is_bg       <= 1'b0;
         end
-        de_d1 <= de_in; // 使能信号第1拍延迟
+        de_d1 <= de_in;
 
-        // ---------------- 第2拍：对比度增强 + 归一化输出 ----------------
-        // 步骤1：原始灰度归一化（右移8位÷256）
+        // ---------------- 第2拍：【暴力对比度拉伸】 + 【暴力反相】----------------
         gray_raw <= gray_temp[15:8];
-        
-        // 步骤2：对比度增强（核心优化，适配不同车牌亮度）
-        // 公式：enhance = (raw - 128) * gain + 128 + offset
-        // 避免溢出：先扩展到10位，再裁剪回8位
+        // 【暴力修改2】对比度拉到4，彻底拉开底和字的差距
         gray_enhance <= ((gray_raw - 8'd128) * CONTRAST_GAIN) + 8'd128 + BRIGHTNESS_OFFSET;
         
-        // 步骤3：溢出保护（0-255范围限制）
-        if (gray_enhance > 10'd255) begin
-            gray_out <= 8'd255;
-        end else if (gray_enhance < 10'd0) begin
-            gray_out <= 8'd0;
+        // 【暴力修改3】是底色直接输出0（纯黑），是字符直接输出255（纯白），彻底消灭灰色
+        if (is_bg) begin
+            gray_out <= 8'd0; // 底色直接钉死纯黑
         end else begin
-            gray_out <= gray_enhance[7:0]; // 最终8bit灰度输出
+            // 字符直接钉死纯白
+            if (gray_enhance > 10'd128)
+                gray_out <= 8'd255;
+            else
+                gray_out <= 8'd0;
         end
         
-        de_out <= de_d1; // 使能信号第2拍延迟，总延迟2拍（匹配后续模块）
+        de_out <= de_d1;
     end
 end
 
